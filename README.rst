@@ -58,6 +58,17 @@ Installation
 
       $ pip install xUnique
 
+- install using CocoaPods:
+
+.. code-block:: ruby
+
+    pod "xUnique"
+
+This will download a local copy of the ``xUnique`` script and a bash script to run it
+against both your main project and your CocoaPods project. This is so the scripts may be
+updated as needed, but different people trying to use the same project will be guaranteed 
+to have the same xUnique version. 
+
 - install locally:
 
   .. code-block:: bash
@@ -86,13 +97,19 @@ Xcode Scheme "build post-action" (Recommended)
 #.  click symbol ``+`` on the left bottom corner of the right pane
 #.  choose ``New Run Script Action``
 #.  choose your selected scheme name in ``Provide build settings from``
-#.  input commands below:
+#.  if you used ``pip`` or direct installation, input commands below:
     
     .. code-block:: bash
 
       $ xunique "${PROJECT_FILE_PATH}/project.pbxproj"
 
-#.  click ``Close`` and it's all done.
+#.  if you used CocoaPods to install, input the following instead:
+
+.. code-block:: bash
+   
+   "${SRCROOT}/Pods/xUnique/xUnique_Run_Script.sh"
+
+#.  click ``Close`` to save your changes.
 #.  Next time when you Build or Run the project, xUnique would be
     triggered after build success. If the build works, you could commit
     all files.
@@ -124,7 +141,11 @@ Git hook
 CocoaPods users
 ~~~~~~~~~~~~~~~
 
-If your project uses CocoaPods AND added ``Pods`` directory to source control, you may also need to uniquify ``Pods.xcodeproj``: 
+If your project uses CocoaPods AND added ``Pods`` directory to source control, 
+you may also need to uniquify ``Pods.xcodeproj``. 
+
+If you've installed xUnique via CocoaPods, the included ``xUnique_Run_Script.sh`` does
+this for you. However, if you'd prefer to do it yourself: 
 
 -  Xcode "build post-action" : add extra command below
         
@@ -167,7 +188,6 @@ Examples
 
 add xUnique to Xcode post action
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 
 .. figure:: https://raw.github.com/truebit/xUnique/gif/xUnique_Build_Post_Action.gif
    :alt: xUnique\_Build\_Post\_Action
