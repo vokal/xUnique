@@ -116,7 +116,7 @@ Xcode Scheme "build post-action" (Recommended)
 #. Demo gif animation is `here <https://github.com/truebit/xUnique#add-xunique-to-xcode-post-action>`__
 
 **NOTE:** Do not try to add this as a Run Script Build Action to your actual target, 
-or Xcode will error out since the identifiers have changed since the build began. 
+or the build will fail at the Run Script phase because the project file has changed. 
 
 Git hook
 ~~~~~~~~
