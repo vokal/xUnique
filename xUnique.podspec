@@ -17,7 +17,6 @@ xUnique converts all the 96-bit UUIDs (24 alphanumeric chars) to MD5 hex digests
 
   s.ios.deployment_target = '6.0'
   s.osx.deployment_target = '10.9'
-  s.requires_arc = true
 
   s.preserve_paths = 'setup.py', 'xUnique.py', 'xUnique_Run_Script.sh' 
 end
