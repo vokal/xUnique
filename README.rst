@@ -11,7 +11,7 @@ unique for the same added file (or other entries like groups, build
 phases, etc.) on different machines, which makes it a developer's
 nightmare to merge and resolve conflicts in ``project.pbxproj``.
 
-*xUnique* converts all the 96bit ``UUID``s (24 alphanumeric chars) to
+*xUnique* converts all the 96-bit ``UUID``s (24 alphanumeric chars) to
 MD5 hex digests (32 hex chars), and Xcode recognizes these MD5 digests.
 
 What it does & How it works
