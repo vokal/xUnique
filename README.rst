@@ -1,7 +1,7 @@
 xUnique
 =======
 
-*xUnique*, is a pure Python script to regenerate ``project.pbxproj``,
+*xUnique* is a pure Python script to regenerate ``project.pbxproj``,
 a.k.a the Xcode project file, and make each identifier unique to the project,
 but the same on any machine.
 
