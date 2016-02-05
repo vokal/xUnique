@@ -76,7 +76,7 @@ How to use
 
 There are many ways to use this script after you installed *xUnique* . I will introduce two:
 
-Xcode "build post-action" (Recommended)
+Xcode Scheme "build post-action" (Recommended)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 #.  open ``Edit Scheme`` in Xcode (shortcut:
@@ -97,6 +97,9 @@ Xcode "build post-action" (Recommended)
     triggered after build success. If the build works, you could commit
     all files.
 #. Demo gif animation is `here <https://github.com/truebit/xUnique#add-xunique-to-xcode-post-action>`__
+
+**NOTE:** Do not try to add this as a Run Script Build Action to your actual target, 
+or Xcode will error out since the identifiers have changed since the build began. 
 
 Git hook
 ~~~~~~~~
